@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Ill-Open-This-One.sln"
+    "dotnet.defaultSolution": "I'll Open This One.sln"
 }
