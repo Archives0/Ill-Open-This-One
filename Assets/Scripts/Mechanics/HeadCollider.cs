@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class CollisionGameObjectExample : MonoBehaviour
 {
+    void Awake() {
+        Debug.Log("Testing 123");
+    }
     //Detect collisions between the GameObjects with Colliders attached
     void OnCollisionEnter(Collision collision)
     {
         //Check for a match with the specified name on any GameObject that collides with your GameObject
 
+        Debug.Log("collision!");
         var x = collision.gameObject.GetComponent<IInteractable>();
 
         if (x != null)
@@ -18,6 +22,22 @@ public class CollisionGameObjectExample : MonoBehaviour
         else
         {
             Debug.Log("Hitting non-interactable object");
+        }
+    }
+
+    void OnTriggerEnter(Collider test) {
+        Debug.Log("Trigger!, trying to get interactible, from: " + test.name + " type: " + test.GetType());
+        var x = test.gameObject.GetComponent<IInteractable>();
+
+        if (x != null)
+        {
+            //If the GameObject's name matches the one you suggest, output this message in the console
+            Debug.Log("Do something here");
+            Debug.Log(test.gameObject);
+        }
+        else
+        {
+            Debug.Log("Trigger!, trying to get interactible, from: " + test.name + " type: " + test.GetType());
         }
     }
 }
