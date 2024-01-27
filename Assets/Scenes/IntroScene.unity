@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 565061845}
   - component: {fileID: 565061847}
   - component: {fileID: 565061846}
+  - component: {fileID: 565061848}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -275,7 +276,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 50}
+  m_AnchoredPosition: {x: -200, y: 80}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565061846
@@ -298,15 +299,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'From a 4,000 year old Sumerian tablet we find written one of the earliest
-    jokes
-
-    
+  m_text: 'On a 4,000 year old Sumerian tablet, we find inscribed one of the earliest
+    jokes...
 
     "A dog walks into a bar and says ''I cannot see a thing...''"'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 77fed3389aa10594dbe85a97243ab5d1, type: 2}
+  m_sharedMaterial: {fileID: -3137246098433190551, guid: 77fed3389aa10594dbe85a97243ab5d1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -380,6 +379,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 565061844}
   m_CullTransparentMesh: 1
+--- !u!114 &565061848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565061844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad63f64e3dc74d7478ba243d4fa5114e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &732942919
 GameObject:
   m_ObjectHideFlags: 0
