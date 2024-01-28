@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6515637188964171883}
   - component: {fileID: 7492565725757767115}
   - component: {fileID: 4023189992327952626}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Vase
   m_TagString: Untagged
   m_Icon: {fileID: 0}

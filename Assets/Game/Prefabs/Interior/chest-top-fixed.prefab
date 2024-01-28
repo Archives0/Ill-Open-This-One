@@ -139,4 +139,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8ee4c99c19a384fb8e271d461fbe1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pop: {fileID: 8300000, guid: 046b77b3ee3047f418f7b7cefb7e6bd6, type: 3}
   m_ForceMagnitude: 2e-10

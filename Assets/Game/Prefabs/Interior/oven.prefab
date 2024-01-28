@@ -330,7 +330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1680e649881edae40b4036218ed4cf45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  strike: {fileID: 8300000, guid: 513ac28bc30f3f441996a06eb7285b2f, type: 3}
+  strike: {fileID: 8300000, guid: 9b66e1b47ed0d594d9a388bb5b4e34f4, type: 3}
   pointLight: {fileID: 4561188831839650154}
   fire: {fileID: 854843353821967184}
 --- !u!65 &2685082390355494612
