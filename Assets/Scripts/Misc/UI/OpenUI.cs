@@ -6,11 +6,6 @@ public class OpenUI : MonoBehaviour
 {
 
     [SerializeField] GameObject UI;
-    
-    void Start()
-    {
-        
-    }
 
     public void EnableUI()
     {
