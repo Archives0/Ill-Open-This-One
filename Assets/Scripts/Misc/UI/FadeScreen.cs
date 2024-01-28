@@ -17,8 +17,13 @@ public class FadeScreen : MonoBehaviour
         StartCoroutine(FadeOutCR(time));
     }
 
+    public void FadeIn(float time)
+    {
+        StartCoroutine(FadeInCR(time));
+    }
 
-    IEnumerator FadeOutCR(float time)
+
+    public IEnumerator FadeOutCR(float time)
     {
         while(canvasGroup.alpha < 1)
         {

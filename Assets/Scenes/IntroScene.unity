@@ -190,7 +190,7 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.4716981, g: 0.0106799435, b: 0.026471253, a: 1}
   m_Intensity: 50
   m_Range: 10
   m_SpotAngle: 30
@@ -409,8 +409,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 230}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 6.639504, y: 0.00068855}
+  m_SizeDelta: {x: 786.7209, y: 349.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &565061846
 MonoBehaviour:
@@ -432,10 +432,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'On a 4,000 year old Sumerian tablet, we find inscribed one of the earliest
-    jokes...
-
-    "A dog walks into a bar and says ''I cannot see a thing...''"'
+  m_text: "On a 4,000 year old Sumerian tablet, we find inscribed one of the earliest
+    jokes...\n\"A dog walks into a bar and says \n'I cannot see a thing...'\""
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 77fed3389aa10594dbe85a97243ab5d1, type: 2}
   m_sharedMaterial: {fileID: -3137246098433190551, guid: 77fed3389aa10594dbe85a97243ab5d1, type: 2}
@@ -462,8 +460,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -498,7 +496,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -531.12335, w: -85.41458}
+  m_margin: {x: 0, y: 0, z: -2.4008179, w: -1.6381836}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -803,6 +801,7 @@ GameObject:
   - component: {fileID: 1341443697}
   - component: {fileID: 1341443696}
   - component: {fileID: 1341443695}
+  - component: {fileID: 1341443699}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -839,7 +838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -894,6 +893,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1341443699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341443694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 678676ed66e0be74789b7a4560355bb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1432942863
 GameObject:
   m_ObjectHideFlags: 0

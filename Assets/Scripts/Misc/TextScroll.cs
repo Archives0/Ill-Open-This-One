@@ -7,12 +7,14 @@ public class TextScroll : MonoBehaviour
 {
     TextMeshProUGUI text;
 	FadeScreen fadeScreen;
+	LevelManager levelManager;
 
 	string story;
 
 	void Awake () 
 	{
 		fadeScreen = FindObjectOfType<FadeScreen>();
+		levelManager = FindObjectOfType<LevelManager>();
 		text = text = GetComponent<TextMeshProUGUI> ();
 
 		story = text.text;
@@ -31,7 +33,8 @@ public class TextScroll : MonoBehaviour
 			yield return new WaitForSeconds (0.125f);
 		}
 
-		fadeScreen.FadeOut(5f);
+		yield return fadeScreen.FadeOutCR(5f);
+		levelManager.NextLevel();
 	}
 
 }
