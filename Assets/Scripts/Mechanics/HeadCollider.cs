@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 public class CollisionGameObjectExample : MonoBehaviour
 {
-    List<IInteractable> interactableItems = new List<IInteractable>();
+    Dictionary<IInteractable, GameObject> interactableItems = new Dictionary<IInteractable, GameObject>();
 
     void Awake() {
         Debug.Log("Testing 123");
@@ -34,25 +34,20 @@ public class CollisionGameObjectExample : MonoBehaviour
     {
         if(Input.GetButtonDown("e"))
         {
-            GameObject closestObject = null;
+            IInteractable closestInteractable = null;
             float closestDistance = Mathf.Infinity;
 
-            var gameObjects = interactableItems.Select(i => (GameObject)i).ToList();
-
-            foreach (GameObject obj in gameObjects)
+            foreach (IInteractable interactable in interactableItems.Keys)
             {
-                if (obj != null)
-                {
-                    float distance = Vector3.Distance(referenceObject.transform.position, obj.transform.position);
+                float distance = Vector3.Distance(this.transform.position, interactableItems[interactable].transform.position);
 
-                    if (distance < closestDistance)
-                    {
-                        closestObject = obj;
-                        closestDistance = distance;
-                    }
+                if (distance < closestDistance)
+                {
+                    closestInteractable = interactable;
+                    closestDistance = distance;
                 }
             }
-            ((IInteractable)closestObject).Interact();
+            closestInteractable.Interact();
         }
     }
 
@@ -62,9 +57,9 @@ public class CollisionGameObjectExample : MonoBehaviour
 
         if (x != null)
         {
-            if (!interactableItems.Contains(x))
+            if (!interactableItems.ContainsKey(x))
             {
-                interactableItems.Add(x);
+                interactableItems.Add(x, test.gameObject);
             }
 
             //If the GameObject's name matches the one you suggest, output this message in the console
@@ -85,7 +80,7 @@ public class CollisionGameObjectExample : MonoBehaviour
 
         if (x != null)
         {
-            if (interactableItems.Contains(x))
+            if (interactableItems.ContainsKey(x))
             {
                 Debug.Log("Removing interactable:");
                 interactableItems.Remove(x);
