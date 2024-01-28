@@ -6,11 +6,15 @@ using UnityEngine;
 public class TextScroll : MonoBehaviour
 {
     TextMeshProUGUI text;
+	FadeScreen fadeScreen;
+
 	string story;
 
 	void Awake () 
 	{
+		fadeScreen = FindObjectOfType<FadeScreen>();
 		text = text = GetComponent<TextMeshProUGUI> ();
+
 		story = text.text;
 		text.text = "";
 
@@ -26,6 +30,8 @@ public class TextScroll : MonoBehaviour
 			text.text += word + " ";
 			yield return new WaitForSeconds (0.125f);
 		}
+
+		fadeScreen.FadeOut(5f);
 	}
 
 }

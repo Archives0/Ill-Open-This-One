@@ -7,13 +7,18 @@ public class FadeScreen : MonoBehaviour
 
     CanvasGroup canvasGroup;
     
-    void Start()
+    void Awake()
     {
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
+    public void FadeOut(float time)
+    {
+        StartCoroutine(FadeOutCR(time));
+    }
 
-    public IEnumerator FadeOut(float time)
+
+    IEnumerator FadeOutCR(float time)
     {
         while(canvasGroup.alpha < 1)
         {
@@ -22,7 +27,7 @@ public class FadeScreen : MonoBehaviour
         }
     }
 
-    public IEnumerator FadeIn(float time)
+    public IEnumerator FadeInCR(float time)
     {
         while(canvasGroup.alpha > 0)
         {
