@@ -23,8 +23,8 @@ public class LevelManager : MonoBehaviour
 
         if(nextIndex > 2) {
             SceneManager.LoadScene(0);
+        } else {
+            SceneManager.LoadScene(nextIndex);
         }
-        
-        SceneManager.LoadScene(nextIndex);
     }
 }
