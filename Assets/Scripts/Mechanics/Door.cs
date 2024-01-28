@@ -9,6 +9,8 @@ public class Door : MonoBehaviour, IInteractable
     Vector3 initialRot;
     bool isOpen = false;
 
+    public bool isFinalDoor;
+
     void Start()
     {
         initialRot = transform.localEulerAngles;
@@ -43,6 +45,12 @@ public class Door : MonoBehaviour, IInteractable
                 yield return new WaitForEndOfFrame();
             }
             isOpen = true;
+
+            if (isFinalDoor)
+            {
+                var levelManager = FindObjectOfType<LevelManager>();
+                levelManager.NextLevel();
+            }
         }
         else
         {

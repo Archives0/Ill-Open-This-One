@@ -18,10 +18,13 @@ public class LevelManager : MonoBehaviour
         int currentIndex = SceneManager.GetActiveScene().buildIndex;
         int nextIndex = currentIndex + 1;
 
+        Debug.Log("Going to scene index:");
+        Debug.Log(nextIndex);
+
         if(nextIndex > 2) {
             return;
         }
-
+        
         SceneManager.LoadScene(nextIndex);
     }
 }
