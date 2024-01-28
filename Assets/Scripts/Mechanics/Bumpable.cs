@@ -14,6 +14,10 @@ public class Bumpable : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        //If this isn't the player character skip
+        if (!collision.gameObject.CompareTag("PlayerCharacter")) {
+            return;
+        }
         // Calculate the collision direction.
         Vector3 collisionDirection = transform.position - collision.contacts[0].point;
         collisionDirection.Normalize();
