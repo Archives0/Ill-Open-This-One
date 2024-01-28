@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class TextScroll : MonoBehaviour
 {
+	[SerializeField] float textSpeed = 0.125f;
+
     TextMeshProUGUI text;
 	FadeScreen fadeScreen;
 	LevelManager levelManager;
@@ -30,7 +32,7 @@ public class TextScroll : MonoBehaviour
 		foreach (var word in words) 
 		{
 			text.text += word + " ";
-			yield return new WaitForSeconds (0.125f);
+			yield return new WaitForSeconds (textSpeed);
 		}
 
 		yield return fadeScreen.FadeOutCR(5f);
