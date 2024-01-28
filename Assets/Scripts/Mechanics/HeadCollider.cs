@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 public class CollisionGameObjectExample : MonoBehaviour
 {
-
     List<IInteractable> interactableItems = new List<IInteractable>();
 
     void Awake() {
@@ -29,6 +29,32 @@ public class CollisionGameObjectExample : MonoBehaviour
             Debug.Log("Hitting non-interactable object");
         }
     } */
+
+    void Update()
+    {
+        if(Input.GetButtonDown("e"))
+        {
+            GameObject closestObject = null;
+            float closestDistance = Mathf.Infinity;
+
+            var gameObjects = interactableItems.Select(i => (GameObject)i).ToList();
+
+            foreach (GameObject obj in gameObjects)
+            {
+                if (obj != null)
+                {
+                    float distance = Vector3.Distance(referenceObject.transform.position, obj.transform.position);
+
+                    if (distance < closestDistance)
+                    {
+                        closestObject = obj;
+                        closestDistance = distance;
+                    }
+                }
+            }
+            ((IInteractable)closestObject).Interact();
+        }
+    }
 
     void OnTriggerEnter(Collider test) {
         Debug.Log("Trigger!, trying to get interactible, from: " + test.name + " type: " + test.GetType());
