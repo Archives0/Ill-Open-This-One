@@ -20,13 +20,13 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+  m_AmbientSkyColor: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: a95092dc3d0f7ea42a1d6520401cdb2f, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.26713863, g: 0.2237257, b: 0.21440765, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -167,6 +167,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555562684}
     m_Modifications:
+    - target: {fileID: 4880670944027786834, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248593405160095354, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
       propertyPath: m_Name
       value: WallTorch (1)
@@ -501,6 +505,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555562684}
     m_Modifications:
+    - target: {fileID: 4880670944027786834, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248593405160095354, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
       propertyPath: m_Name
       value: WallTorch
@@ -915,6 +923,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555562684}
     m_Modifications:
+    - target: {fileID: 4880670944027786834, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248593405160095354, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
       propertyPath: m_Name
       value: WallTorch (3)
@@ -1055,6 +1067,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555562684}
     m_Modifications:
+    - target: {fileID: 4880670944027786834, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248593405160095354, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
       propertyPath: m_Name
       value: WallTorch
@@ -1253,7 +1269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -1942,7 +1958,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0011243781, y: 0.9787461, z: -0.20500231, w: 0.0053681387}
+  m_LocalRotation: {x: 0.0011243782, y: 0.9787461, z: -0.20500231, w: 0.005368139}
   m_LocalPosition: {x: 4.970656, y: 2.2000053, z: -15.1449995}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2346,6 +2362,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555562684}
     m_Modifications:
+    - target: {fileID: 4880670944027786834, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248593405160095354, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
       propertyPath: m_Name
       value: WallTorch (2)
@@ -2642,6 +2662,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555562684}
     m_Modifications:
+    - target: {fileID: 4880670944027786834, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248593405160095354, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
       propertyPath: m_Name
       value: WallTorch (4)
@@ -3377,6 +3401,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555562684}
     m_Modifications:
+    - target: {fileID: 4880670944027786834, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248593405160095354, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
       propertyPath: m_Name
       value: WallTorch (5)
@@ -4350,11 +4378,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435364955135063645, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.005368139
+      value: 0.0053681396
       objectReference: {fileID: 0}
     - target: {fileID: 3435364955135063645, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0011243783
+      value: 0.0011243782
       objectReference: {fileID: 0}
     - target: {fileID: 3435364955135063645, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4374,11 +4402,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615033051009047587, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0053876718
+      value: 0.005387634
       objectReference: {fileID: 0}
     - target: {fileID: 4615033051009047587, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0010268107
+      value: 0.0010268035
       objectReference: {fileID: 0}
     - target: {fileID: 4615033051009047587, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4521,6 +4549,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1555562684}
     m_Modifications:
+    - target: {fileID: 4880670944027786834, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7248593405160095354, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
       propertyPath: m_Name
       value: WallTorch
