@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Torch : MonoBehaviour, IInteractable
 {
+    [SerializeField] AudioClip strike;
+    AudioSource audioSource;
+
     public GameObject pointLight;
     public GameObject fire; 
     bool isOn = false;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         pointLight.SetActive(false);
         fire.SetActive(false);
     }
@@ -19,6 +23,7 @@ public class Torch : MonoBehaviour, IInteractable
         isOn = !isOn;
         pointLight.SetActive(isOn);
         fire.SetActive(isOn);
+        audioSource.PlayOneShot(strike);
     }
 
     public void PickUp()
