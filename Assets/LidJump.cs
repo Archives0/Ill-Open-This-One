@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class LidJump : MonoBehaviour, IInteractable
 {
-    public Rigidbody m_Rigidbody;
-    public float m_ForceMagnitude = 2000f; // Adjust the force magnitude as needed
+    private Rigidbody m_Rigidbody;
+    public float m_ForceMagnitude = .0000000002f; // Adjust the force magnitude as needed
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +25,7 @@ public class LidJump : MonoBehaviour, IInteractable
     // Update is called once per frame
     public void Interact()
     {
+        m_Rigidbody.isKinematic = false;
         Vector3 forceDirection = new Vector3(1f, 1f, 0f).normalized;
         m_Rigidbody.AddForce(forceDirection * m_ForceMagnitude);
     }
