@@ -25,12 +25,16 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] float gravity = -9.81f;
     [SerializeField] float jumpHeight = 3f;
 
+    [SerializeField] AudioClip scrape;
+
+    AudioSource audioSource;
     Vector3 velocity;
     bool isGrounded;
 
     // Start function locks and hides cursor
     private void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -66,6 +70,11 @@ public class ThirdPersonMovement : MonoBehaviour
         // that the camera is facing 
         if(direction.magnitude >= 0.1f)
         {
+            if(!audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(scrape);
+            }
+
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
             transform.rotation = Quaternion.Euler(0f, angle, 0f);
@@ -73,6 +82,17 @@ public class ThirdPersonMovement : MonoBehaviour
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * speed * Time.deltaTime);
         }
+        else
+        {
+            audioSource.Stop();
+        }
 
+        // void FootStep()
+        // {
+        //     if(!audioSource.isPlaying)
+        //     {
+        //         audioSource.PlayOneShot(scrape);
+        //     }
+        // }
     }
 }
