@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - OpenUI
+  - PlayerCharacter
   layers:
   - Default
   - TransparentFX
