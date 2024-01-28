@@ -7,4 +7,5 @@ public interface IInteractable
 {
     // Do the thing
     void Interact() {}
+    void PickUp() {}
 }

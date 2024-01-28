@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Door : MonoBehaviour
+public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] Vector3 rotAmount;
     [SerializeField] float openDuration;
@@ -17,6 +17,15 @@ public class Door : MonoBehaviour
         public void DoorOpen()
     {
         StartCoroutine(SlideOpen());
+    }
+
+    public void Interact() {
+        DoorOpen();
+    }
+
+    public void PickUp()
+    {
+        return;
     }
 
     public IEnumerator SlideOpen()
