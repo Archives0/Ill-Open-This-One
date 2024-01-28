@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FadeScreen : MonoBehaviour
 {
@@ -12,8 +13,13 @@ public class FadeScreen : MonoBehaviour
         canvasGroup = GetComponent<CanvasGroup>();
     }
 
-    public void FadeOut(float time)
+    public void FadeOut(float time, bool isBlack=true)
     {
+        var image = GetComponent<Image>();
+        if (!isBlack)
+        {
+            image.color = Color.white;
+        }
         StartCoroutine(FadeOutCR(time));
     }
 
