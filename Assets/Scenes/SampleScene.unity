@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.25636405, g: 0.21887755, b: 0.23047253, a: 1}
+  m_IndirectSpecularColor: {r: 0.2565826, g: 0.21910155, b: 0.23074225, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -546,6 +546,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotAmount: {x: 0, y: 90, z: 0}
   openDuration: 1
+  door: {fileID: 0}
   isFinalDoor: 0
 --- !u!1001 &257362795
 PrefabInstance:
@@ -1673,7 +1674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &705507994
 Light:
   m_ObjectHideFlags: 0
@@ -3237,75 +3238,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02277ad64c793b64b8ae2be32ede3b38, type: 3}
---- !u!1001 &1266435548
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8471550671439587148, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_Name
-      value: crate
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.4078
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.4078
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.4078
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.0084457
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.738941
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9140951404147424758, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 272f4649c5941d644853a5682e8e8fca, type: 3}
 --- !u!1001 &1267167444
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4919,6 +4851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotAmount: {x: 0, y: 90, z: 0}
   openDuration: 1
+  door: {fileID: 0}
   isFinalDoor: 0
 --- !u!1001 &1986415849
 PrefabInstance:
@@ -5598,11 +5531,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615033051009047587, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.0053876718
+      value: 0.005387634
       objectReference: {fileID: 0}
     - target: {fileID: 4615033051009047587, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0010268107
+      value: 0.0010268035
       objectReference: {fileID: 0}
     - target: {fileID: 4615033051009047587, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5977,4 +5910,3 @@ SceneRoots:
   - {fileID: 294545491}
   - {fileID: 903616583}
   - {fileID: 947299268}
-  - {fileID: 1266435548}
