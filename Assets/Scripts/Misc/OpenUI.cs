@@ -12,12 +12,12 @@ public class OpenUI : MonoBehaviour
         
     }
 
-    void EnableUI()
+    public void EnableUI()
     {
         UI.SetActive(true);
     }
 
-    void DisableUI()
+    public void DisableUI()
     {
         UI.SetActive(false);
     }

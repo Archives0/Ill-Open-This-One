@@ -6,8 +6,14 @@ public class CollisionGameObjectExample : MonoBehaviour
 {
     Dictionary<IInteractable, GameObject> interactableItems = new Dictionary<IInteractable, GameObject>();
 
+    private OpenUI openUI;
+
     void Awake() {
-        Debug.Log("Testing 123");
+        var openUIObject = GameObject.FindGameObjectsWithTag("OpenUI").First();
+        Debug.Log("Found object: " + openUIObject);
+        openUI = openUIObject.GetComponent<OpenUI>();
+        Debug.Log("Found Component:" + openUI);
+        openUI.DisableUI();
     }
 
     void Update()
@@ -49,6 +55,7 @@ public class CollisionGameObjectExample : MonoBehaviour
         {
             if (!interactableItems.ContainsKey(x))
             {
+                openUI.EnableUI();
                 interactableItems.Add(x, test.gameObject);
             }
         }
@@ -65,6 +72,9 @@ public class CollisionGameObjectExample : MonoBehaviour
             if (interactableItems.ContainsKey(x))
             {
                 interactableItems.Remove(x);
+                if(interactableItems.Count() == 0){
+                    openUI.DisableUI();
+                } 
             }
         }
     }

@@ -1760,7 +1760,7 @@ GameObject:
   - component: {fileID: 1905918680}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: OpenUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2329,6 +2329,10 @@ PrefabInstance:
       propertyPath: cam
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 1971186062578147387, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000000651272
+      objectReference: {fileID: 0}
     - target: {fileID: 3435364955135063645, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.17717832
@@ -2339,11 +2343,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4615033051009047587, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.26245075
+      value: -0.26245072
       objectReference: {fileID: 0}
     - target: {fileID: 4615033051009047587, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.044164695
+      value: 0.044164676
       objectReference: {fileID: 0}
     - target: {fileID: 5632139448167315833, guid: 5c420cdb9766e44df9bbd89f3e3e4f9c, type: 3}
       propertyPath: m_LocalPosition.x
