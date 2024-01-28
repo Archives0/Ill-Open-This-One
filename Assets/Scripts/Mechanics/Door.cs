@@ -6,6 +6,9 @@ public class Door : MonoBehaviour, IInteractable
 {
     [SerializeField] Vector3 rotAmount;
     [SerializeField] float openDuration;
+    [SerializeField] AudioClip door;
+
+    AudioSource audioSource;
     Vector3 initialRot;
     bool isOpen = false;
 
@@ -13,11 +16,13 @@ public class Door : MonoBehaviour, IInteractable
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         initialRot = transform.localEulerAngles;
     }
 
         public void DoorOpen()
     {
+        audioSource.PlayOneShot(door);
         StartCoroutine(SlideOpen());
     }
 
