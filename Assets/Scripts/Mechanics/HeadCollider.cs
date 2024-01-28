@@ -32,7 +32,7 @@ public class CollisionGameObjectExample : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("e"))
+        if(Input.GetKey(KeyCode.E))
         {
             IInteractable closestInteractable = null;
             float closestDistance = Mathf.Infinity;
@@ -47,12 +47,22 @@ public class CollisionGameObjectExample : MonoBehaviour
                     closestDistance = distance;
                 }
             }
-            closestInteractable.Interact();
+            
+            if (closestInteractable != null)
+            {
+                Debug.Log("Found closest interactable:");
+                Debug.Log(closestInteractable);
+                closestInteractable.Interact();
+            }
+            else
+            {
+                Debug.Log("No interactable found");
+            }
         }
     }
 
     void OnTriggerEnter(Collider test) {
-        Debug.Log("Trigger!, trying to get interactible, from: " + test.name + " type: " + test.GetType());
+        // Debug.Log("Trigger!, trying to get interactible, from: " + test.name + " type: " + test.GetType());
         var x = test.gameObject.GetComponent<IInteractable>();
 
         if (x != null)
@@ -63,18 +73,18 @@ public class CollisionGameObjectExample : MonoBehaviour
             }
 
             //If the GameObject's name matches the one you suggest, output this message in the console
-            Debug.Log("Found interactable:");
-            Debug.Log(test.gameObject);
-        }
+            // Debug.Log("Found interactable:");
+            // Debug.Log(test.gameObject);
+        } /*
         else
         {
             Debug.Log("Trigger!, trying to get interactible, from: " + test.name + " type: " + test.GetType());
-        }
+        } */
     }
 
     void OnTriggerExit(Collider test) {
 
-        Debug.Log("Trigger!, exiting interactable, from: " + test.name + " type: " + test.GetType());
+        // Debug.Log("Trigger!, exiting interactable, from: " + test.name + " type: " + test.GetType());
 
         var x = test.gameObject.GetComponent<IInteractable>();
 
@@ -82,15 +92,15 @@ public class CollisionGameObjectExample : MonoBehaviour
         {
             if (interactableItems.ContainsKey(x))
             {
-                Debug.Log("Removing interactable:");
+                // Debug.Log("Removing interactable:");
                 interactableItems.Remove(x);
-                Debug.Log(test.gameObject);
-            }
+                // Debug.Log(test.gameObject);
+            } /*
             else
             {
-                Debug.Log("Interactable not in list (???):");
+                // Debug.Log("Interactable not in list (???):");
                 Debug.Log(test.gameObject);
-            }
+            } */
         }
     }
 }
