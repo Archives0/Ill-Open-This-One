@@ -435,8 +435,8 @@ MonoBehaviour:
   m_text: "On a 4,000 year old Sumerian tablet, we find inscribed one of the earliest
     jokes...\n\"A dog walks into a bar and says \n'I cannot see a thing...'\""
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 77fed3389aa10594dbe85a97243ab5d1, type: 2}
-  m_sharedMaterial: {fileID: -3137246098433190551, guid: 77fed3389aa10594dbe85a97243ab5d1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: abfaaf58f4a95e746bfd4d1c28a1377e, type: 2}
+  m_sharedMaterial: {fileID: -1742901690881476378, guid: abfaaf58f4a95e746bfd4d1c28a1377e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -522,6 +522,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad63f64e3dc74d7478ba243d4fa5114e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textSpeed: 0.125
+  isEndingScene: 0
 --- !u!1 &628521902 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7851737601036360825, guid: 91ffff6ea3c68d6419623a7e743b973d, type: 3}
