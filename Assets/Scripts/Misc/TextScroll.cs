@@ -11,6 +11,8 @@ public class TextScroll : MonoBehaviour
 	FadeScreen fadeScreen;
 	LevelManager levelManager;
 
+	public bool isEndingScene;
+
 	string story;
 
 	void Awake () 
@@ -34,9 +36,32 @@ public class TextScroll : MonoBehaviour
 			text.text += word + " ";
 			yield return new WaitForSeconds (textSpeed);
 		}
+		
+		yield return fadeScreen.FadeOutCR(4f);
 
-		yield return fadeScreen.FadeOutCR(5f);
-		levelManager.NextLevel();
+		if (!isEndingScene)
+		{
+			levelManager.NextLevel();
+		}
+		else
+		{
+			yield return EndSceneScroll();
+		}
 	}
 
+	public IEnumerator EndSceneScroll()
+    {
+		Debug.Log("EndSceneScroll");
+		text.color = Color.black;
+		text.text = "Press ENTER to play again.";
+		yield return null;
+    }
+
+	public void Update()
+	{
+		if(isEndingScene && Input.GetKeyDown(KeyCode.Return))
+		{
+			levelManager.NextLevel();
+		}
+	}
 }

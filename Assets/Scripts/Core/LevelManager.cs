@@ -22,7 +22,7 @@ public class LevelManager : MonoBehaviour
         Debug.Log(nextIndex);
 
         if(nextIndex > 2) {
-            return;
+            SceneManager.LoadScene(0);
         }
         
         SceneManager.LoadScene(nextIndex);
