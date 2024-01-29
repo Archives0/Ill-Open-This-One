@@ -53,7 +53,7 @@ public class TextScroll : MonoBehaviour
     {
 		Debug.Log("EndSceneScroll");
 		text.color = Color.black;
-		text.text = "Press ENTER to play again.";
+		text.text = "Press ENTER to play again. Press ESC to exit.";
 		yield return null;
     }
 
@@ -62,6 +62,12 @@ public class TextScroll : MonoBehaviour
 		if(isEndingScene && Input.GetKeyDown(KeyCode.Return))
 		{
 			levelManager.NextLevel();
+		}
+
+		if(isEndingScene && Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+			Debug.Log("Quitting");
 		}
 	}
 }
